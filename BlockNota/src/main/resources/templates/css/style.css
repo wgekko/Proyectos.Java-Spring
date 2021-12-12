@@ -1,0 +1,9 @@
+.text-indent {
+    text-indent: 50px;
+}
+html, body{
+     margin: 0;
+  padding: 0;
+    background-image:url("fondo-nota.jpg");
+    
+}

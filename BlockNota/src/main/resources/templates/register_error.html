@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xlmns:th="http://www,thymeleaf.org">
+    <head th:replace="/fragments/head :: head"></head>
+    <!--<head>
+        <title>Block de Notas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+          <link href="/css/style.css" rel="stylesheet">
+    </head> -->
+
+    <body  background="css/fondo-nota.jpg" bgcolor="FFCECB"> 
+        <div class="flex flex-col justify-between min-h-screen">
+            <center><h1 class="text-center font-bold text-4xl my-3 text-gray-700">Block de Notas</h1> </center>
+            <nav class="mx-auto max-w-max my-5 grid grid-cols-4 gap-3 text-center">
+                <a th:href="@{/}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Inicio</a>
+                <a th:href="@{/notas}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Notas</a>
+                <a  th:href="@{form-contacto.htm}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Contacto</a>
+                <a th:href="@{/about}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Acerca</a>
+            </nav>    
+            <main>   
+                <section>     
+                    <h1 class="font-bold text-4xl text-center">No se pudo completar el registro</h1>
+                    <a th:href="@{/}" class="border-2 border-gray-400 rounded-md hover:text-white hover:bg-gray-400 p-3 mx-auto max-w-max my-5">Volver</a>           
+                    </div>
+                </section>
+                <aside> 
+
+                    <nav class="grid grid-cols-3 max-w-max gap-3 ml-auto my-5 text-center">
+                        <a th:href="@{/login}" class="font-bold border-2 border-gray-400 rounded-md p-1 hover:bg-gray-400 hover:text-white">Ingresar</a>
+                        <a th:href="@{/register}" class="font-bold border-2 border-gray-400 rounded-md p-1 hover:bg-gray-400 hover:text-white">Registrarse</a>
+                    </nav>
+                </aside >
+            </main>   
+            <footer  th:replace="/fragments/footer :: footer"> </footer>     
+
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+                    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+                    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>    
+
+            <!--      <div>         
+                     <footer class="font-bold bg-gray-300 text-gray-700 text-center p-2">Copyright &copy; - 2021 - Walter Gómez Fullstack Developer</footer>
+                 </div> -->
+    </body>
+</html>

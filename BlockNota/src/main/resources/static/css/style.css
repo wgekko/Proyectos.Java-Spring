@@ -1,0 +1,17 @@
+.text-indent {
+    text-indent: 50px;
+}
+html, body{
+     margin: 0;
+  padding: 0;
+    background-image:url("css/fondo-nota.jpg");
+    
+  .box-blue {
+	background-color:#d8ecf7;
+	border:1px solid #afcde3;
+} 
+borde{
+    font-bold: border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block;
+}
+
+}

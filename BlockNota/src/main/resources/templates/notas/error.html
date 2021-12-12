@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html xlmns:th="http://www,thymeleaf.org">
+    <head>
+        <title>My Site</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+          <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />      
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> 
+           <!--     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+        
+        <link rel="stylesheet"  href="/css/style.css" type="text/css">
+    </head>
+    <body>
+        <div class="flex flex-col justify-between min-h-screen">
+            <h1 class="text-center font-bold text-4xl my-3 text-gray-700">Block de Notas</h1>
+            <nav class="mx-auto max-w-max my-5 grid grid-cols-4 gap-3 text-center">
+                <a th:href="@{/}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Inicio</a>
+                <a th:href="@{/notas}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Notas</a>
+                <a th:href="@{/contact}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Contacto</a>
+                <a th:href="@{/about}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Acerca</a>
+            </nav>   
+            <h1 class="font-bold text-4xl text-center">No se pudo guardar la nota </h1>
+            <a th:href="@{/}" class="border-2 border-gray-400 rounded-md hover:text-white hover:bg-gray-400 p-3 mx-auto max-w-max my-5">Volver</a>
+            <footer class="font-bold bg-gray-300 text-gray-700 text-center p-2">Copyright &copy; - 2021 - Walter Gómez Fullstack Developer </footer>
+        </div>
+    </body>
+</html>

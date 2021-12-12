@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lxlmns:th="http://www,thymeleaf.org"">
+ <head th:replace="/fragments/head :: head"></head>
+<!--<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+     <link rel="stylesheet" href="/css/style1.css">
+</head>-->
+
+  <body  background="css/fondo-nota.jpg" bgcolor="FFCECB"> 
+    <center>   <h1 class="text-center font-bold text-4xl my-3 text-gray-700"><strong>Block de Notas</strong></h1></center>
+    <center>   <nav  class="mx-auto max-w-max my-5 grid grid-cols-4 gap-3 text-center">
+            <a  th:href="@{/}"  class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Inicio</a>
+            <a  th:href="@{/notas}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Notas</a>
+            <a  th:href="@{form-contacto.html}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Contacto</a>
+            <a  th:href="@{/about}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">acerca</a>
+        </nav>    </center>
+    <div class="col-6 mx-auto m-5">
+        <form action="form.html" method="get" class="border border-2 border-muted bg-light p-3 rounded-2" novalidate>
+            <legend class="fw-bold text-primary">Formulario Contacto</legend>
+                <div class="mb-4">
+                <label class="form-label fw-bold text-primary" for="name">Nombre : </label>
+                <input class="form-control" type="text" name="name" id="name" minlength="4" maxlength="64" requered >
+            </div>
+              <div class="mb-4">
+                <label class="form-label fw-bold text-primary" for="name">Apellido : </label>
+                <input class="form-control" type="text" name="name" id="name" minlength="4" maxlength="64" requered>
+            </div>
+            <div class="mb-4">
+                <label class="form-label fw-bold text-primary" for="email">Email :</label>
+                <input class="form-control" type="email" name="email" id="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" requered >
+            </div>
+            <div class="mb-4">
+                <label class="form-label fw-bold text-primary" for="number">Nro. Telefónico :</label>
+                <input class="form-control" type="number" name="number" id="number" requered>
+            </div>
+           <!-- <div class="mb-4">
+                <input class="form-check-control" type="checkbox" name="remember" id="remember">
+                <label class="form-check-label text-primary" for="remember">Recuerdame</label>
+            </div> -->
+            <button type="submit" class="btn border border-2 border-muted rounded-3 text-primary fw-bold"> Enviar</button>
+        </form>
+    </div>
+        
+        <div align="center"  class="col-6 mx-auto m-5">
+                <a href="index.html" class="nav-link mx-3 rounded-3 col">Volver a Inicio</a>
+         </div> 
+         <footer  th:replace="/fragments/footer :: footer"> </footer> 
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script> 
+</body>	
+</html>
