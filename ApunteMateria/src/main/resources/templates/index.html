@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xlmns:th="http://www,thymeleaf.org">
+    <head>
+        <title>Apunte de Materias</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+    <body  background="fondo.jpg" bgcolor="FFCECB" >
+        <main>
+            <header>
+                <h1 class="text-center font-bold text-4xl my-3 text-gray-700">Apuntes de Materias</h1>
+                <nav class="mx-auto max-w-max my-5 grid grid-cols-4 gap-3 text-center">
+                    <a th:href="@{/}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Inicio</a>
+                    <a th:href="@{/apuntes}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Apuntes</a>
+                    <a th:href="@{/form-contacto.html}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Contacto</a>
+                    <a th:href="@{/about}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">About</a>
+                </nav>     
+            </header>
+            <right> <article>
+                    <br><br> <br><br>
+                    <p><center><strong>
+                        Para poder acceder al proceso de crear los apuntes de las materias 
+                        debe ingresar o previamente registrarse
+          </strong> </center></p>
+
+                </article></right>
+               <br><br> <br><br>
+             <aside >
+                    <nav th:if="${sesion == null}" class="grid grid-cols-2 max-w-max gap-3 ml-auto mr-10 my-5 text-center">
+                        <a th:href="@{/login}" class="font-bold border-2 border-gray-400 rounded-md p-1 hover:bg-gray-400 hover:text-white">Ingresar</a>
+                        <a th:href="@{/register}" class="font-bold border-2 border-gray-400 rounded-md p-1 hover:bg-gray-400 hover:text-white">Registrarse</a>
+                    </nav>
+                    <nav th:if="${sesion != null}" class="max-w-max ml-auto mr-10 my-5 text-center">
+                        <form th:action="@{/logout}" method="POST">
+                            <button class="font-bold border-2 border-gray-400 rounded-md p-1 hover:bg-gray-400 hover:text-white">Cerrar sesión</button>
+                        </form>
+                    </nav>
+                </aside>                 
+        </main>
+         <div>
+            <footer class="font-bold bg-gray-300 text-gray-700 text-center p-2">Copyright &copy; - 2021 - Walter Gomez Fullstack Developer</footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xlmns:th="http://www,thymeleaf.org">
+    <head>
+        <title>Apuntes de Materias</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+    </head>
+    <body  background="fondo.jpg" bgcolor="FFCECB" >
+        <main>
+            <header>
+                <div class="flex flex-col justify-between min-h-screen">
+                    <h1 class="text-center font-bold text-4xl my-3 text-gray-700">Apuntes de Materias </h1>
+                    <nav class="mx-auto max-w-max my-5 grid grid-cols-4 gap-3 text-center">
+                        <a th:href="@{/}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Inicio</a>
+                        <a th:href="@{/apuntes}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Apuntes</a>
+                        <a th:href="@{/contact}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Contacto</a>
+                        <a th:href="@{/about}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">About</a>
+                    </nav>    
+            </header>            
+            <article>          
+                <nav th:if="${sesion != null}" class="grid grid-cols-2 max-w-max gap-3 mx-auto my-5 text-center">
+                    <a th:href="@{/apuntes/} + ${id} + @{/edit}" class="font-bold border-2 border-gray-400 rounded-md p-1 hover:bg-gray-400 hover:text-white">Editar</a>
+                    <form th:action="@{/apuntes/} + ${id}" method="post" >
+                        <button type="submit" class="font-bold border-2 border-gray-400 rounded-md p-1 hover:bg-gray-400 hover:text-white">Borrar</button>
+                    </form>
+                </nav>
+                <div class="mx-auto border-2 border-gray-400 rounded-lg p-3 w-2/3 my-5">
+                    <p th:text="'Carrera: ' + ${apuntes.carrera}" class="font-bold text-lg text-center"></p>
+                    <p th:text="'Materia: ' + ${apuntes.materia}" class="font-bold text-lg text-center"></p>
+                    <p th:text="${apuntes.apunte}" class="text-indent"></p>
+                </div>
+            </article>
+            <br><br> <br><br>
+            <aside>            
+                <nav class="grid grid-cols-3 max-w-max gap-3 ml-auto my-5 text-center" th:if="${sesion == null}">
+                    <a th:href="@{/login}" class="font-bold border-2 border-gray-400 rounded-md p-1 hover:bg-gray-400 hover:text-white">Ingrresar</a>
+                    <a th:href="@{/register}" class="font-bold border-2 border-gray-400 rounded-md p-1 hover:bg-gray-400 hover:text-white">Registrarse</a>
+                </nav>
+                <form th:if="${sesion != null}" th:action="@{/logout}" method="POST" class="max-w-max ml-auto mr-10 my-5 text-center">
+                    <button type="submit" class="font-bold border-2 border-gray-400 rounded-md p-1 hover:bg-gray-400 hover:text-white">Cerrar Sesción</button>
+                </form>
+            </aside>                      
+        </main>
+        <div>
+            <footer class="font-bold bg-gray-300 text-gray-700 text-center p-2">Copyright &copy; - 2021 - Walter Gomez Fullstack Developer</footer>
+        </div>    
+    </body>
+</html>

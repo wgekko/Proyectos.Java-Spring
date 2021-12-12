@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xlmns:th="http://www,thymeleaf.org">
+    <head>
+        <title>Apuntes de Materias</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+
+    <body  background="fondo.jpg" bgcolor="FFCECB" >
+        <main>
+            <header>
+                <div class="flex flex-col justify-between min-h-screen">
+                    <h1 class="text-center font-bold text-4xl my-3 text-gray-700">Apuntes de Materias </h1>
+                    <nav class="mx-auto max-w-max my-5 grid grid-cols-4 gap-3 text-center">
+                        <a th:href="@{/}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Inicio</a>
+                        <a th:href="@{/apuntes}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Apuntes</a>
+                        <a th:href="@{/contact}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Contacto</a>
+                        <a th:href="@{/about}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">About</a>
+                    </nav>    
+            </header>
+            <article>       
+                <div>
+                    <h1 class="text-center font-bold text-4xl">Registrarse</h1>
+                    <form th:action="@{/register}" method="POST" th:object="${user}" class="mx-auto p-3 max-w-max my-10 border-4 border-gray-300 rounded-md shadow-md">
+                        <legend class="font-bold text-xl text-center my-3">Registrarse</legend>
+                        <div class="my-3 grid grid-cols-2 gap-3">
+                            <label for="usuario" class="font-bold p-2">Usuario</label>
+                            <input th:field="*{usuario}" id="usuario" placeholder="Usuario" type="text" novalidate="true" class="p-2 border-2 border-gray-300 rounded-md">
+                        </div>
+                        <div class="my-3 grid grid-cols-2 gap-3">
+                            <label for="password" class="font-bold p-2">Clave</label>
+                            <input th:field="*{password}" id="password" placeholder="Password" type="password" novalidate="true" class="p-2 border-2 border-gray-300 rounded-md">
+                        </div>
+                        <div class="my-3 grid grid-cols-2 gap-3">
+                            <label for="email" class="font-bold p-2">Email</label>
+                            <input th:field="*{email}" id="email" placeholder="Email" type="email" novalidate="true" class="p-2 border-2 border-gray-300 rounded-md">
+                        </div>
+                        <div>
+                            <button type="submit" class="rounded-md border-2 border-gray-400 p-2 mx-auto block my-3 hover:text-white hover:bg-gray-400">Registrarse...</button>
+                        </div>
+                    </form>
+            </article>     
+        <br><br> <br><br>
+        <aside>                     
+            <nav class="grid grid-cols-3 max-w-max gap-3 ml-auto my-5 text-center">
+                <a th:href="@{/login}" class="font-bold border-2 border-gray-400 rounded-md p-1 hover:bg-gray-400 hover:text-white">Ingresar </a>
+                <a th:href="@{/register}" class="font-bold border-2 border-gray-400 rounded-md p-1 hover:bg-gray-400 hover:text-white">Registrarse</a>
+            </nav>
+        </aside>                      
+    </main>
+    <div>
+        <footer class="font-bold bg-gray-300 text-gray-700 text-center p-2">Copyright &copy; - 2021 - Walter Gomez Fullstack Developer</footer>
+    </div>         
+</body>
+</html>

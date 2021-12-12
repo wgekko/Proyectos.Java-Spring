@@ -1,0 +1,28 @@
+.text-indent {
+    text-indent: 50px;
+}
+body{
+    background-image: url("static.img/fondo.jpg");
+    
+}
+aside{
+
+    float:right;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    margin-left: 70%;
+    padding: 1%;
+
+}
+article{
+    float: left;
+    color: white;
+    overflow: hidden;
+    margin-right: 30%
+
+
+
+
+
+}

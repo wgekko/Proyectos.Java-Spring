@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lxlmns:th="http://www,thymeleaf.org"">
+    <html xlmns:th="http://www,thymeleaf.org">
+        <head>
+            <title>Apunte de Materias</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        </head>
+        <body  background="fondo.jpg" bgcolor="FFCECB" >
+            <main>
+                <header>
+                    <div class="flex flex-col justify-between min-h-screen">
+                        <h1 class="text-center font-bold text-4xl my-3 text-gray-700">Apuntes de Materias </h1>
+                        <nav class="mx-auto max-w-max my-5 grid grid-cols-4 gap-3 text-center">
+                            <a th:href="@{/}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Inicio</a>
+                            <a th:href="@{/apuntes}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Apuntes</a>
+                            <a th:href="@{/contact}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">Contacto</a>
+                            <a th:href="@{/about}" class="font-bold border-2 border-gray-400 rounded-md p-2 hover:bg-gray-400 hover:text-white block">About</a>
+                        </nav>    
+                </header>                
+                <article>  
+                    <div class="col-6 mx-auto m-5">
+                        <form action="form.html" method="get" class="border border-2 border-muted bg-light p-3 rounded-2" novalidate>
+                            <legend class="fw-bold text-primary">Formulario Contacto</legend>
+                            <div class="mb-4">
+                                <label class="form-label fw-bold text-primary" for="name">Nombre : </label>
+                                <input class="form-control" type="text" name="name" id="name" minlength="4" maxlength="64" requered >
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label fw-bold text-primary" for="name">Apellido : </label>
+                                <input class="form-control" type="text" name="name" id="name" minlength="4" maxlength="64" requered>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label fw-bold text-primary" for="email">Email :</label>
+                                <input class="form-control" type="email" name="email" id="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" requered >
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label fw-bold text-primary" for="number">Nro. Telefónico :</label>
+                                <input class="form-control" type="number" name="number" id="number" requered>
+                            </div>        
+                            <button type="submit" class="btn border border-2 border-muted rounded-3 text-primary fw-bold"> Enviar</button>
+                        </form>
+                    </div>      
+                </article>
+                <br><br> <br><br>
+                <aside>        
+                    <div align="center"  class="col-6 mx-auto m-5">
+                        <a href="index.html" class="nav-link mx-3 rounded-3 col">Volver a Inicio</a>
+                    </div>        
+                    </form>
+                </aside>                      
+            </main>
+            <div>
+                <footer class="font-bold bg-gray-300 text-gray-700 text-center p-2">Copyright &copy; - 2021 - Walter Gomez Fullstack Developer</footer>
+            </div>    
+
+        </body>	
+    </html>
